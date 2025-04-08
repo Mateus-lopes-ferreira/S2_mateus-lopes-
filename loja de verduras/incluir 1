@@ -1,17 +1,10 @@
- produtos= Fiat Mobi: R$ 74.990
-Renault Kwid: R$ 76.090
-Peugeot 208: R$ 79.990
-Fiat Argo: R$ 86.990
-Basalt: R$ 89.990
-Hyundai HB20: R$ 90.690
-VW Polo: R$ 90.990
 produtos = {
     'Alface': 2.50,
     'Tomate': 3.20,
     'Cenoura': 1.80,
     'Pepino': 2.00,
-    'Batata': 1.50]
-[]
+    'Batata': 1.50
+}
 
 def exibir_produtos():
     print("\nVerduras disponíveis para venda:")
