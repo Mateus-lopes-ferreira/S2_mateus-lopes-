@@ -1,0 +1,34 @@
+produtos = {
+    'Alface': 2.50,
+    'Tomate': 3.20,
+    'Cenoura': 1.80,
+    'Pepino': 2.00,
+    'Batata': 1.50
+
+def exibir_produtos():
+    print("\nVerduras disponíveis para venda:")
+    for produto, preco in produtos.items():
+        print(f"{produto}: R${preco:.2f}")
+
+def realizar_compra():
+    total = 0
+    while True:
+        exibir_produtos()
+        produto = input("\nEscolha uma verdura (ou 'sair' para finalizar): ").capitalize()
+        
+        if produto == 'Sair':
+            break
+        
+        if produto in produtos:
+      
+    
+    print(f"\nTotal da compra: R${total:.2f}")
+    print("Obrigado por comprar conosco!")
+
+def main():
+    print("Bem-vindo ao Sistema de Venda de Verduras!")
+    realizar_compra()
+
+if __name__ == "__main__":
+    main()
+
