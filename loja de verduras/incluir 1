@@ -1,0 +1,46 @@
+ produtos= Fiat Mobi: R$ 74.990
+Renault Kwid: R$ 76.090
+Peugeot 208: R$ 79.990
+Fiat Argo: R$ 86.990
+Basalt: R$ 89.990
+Hyundai HB20: R$ 90.690
+VW Polo: R$ 90.990
+produtos = {
+    'Alface': 2.50,
+    'Tomate': 3.20,
+    'Cenoura': 1.80,
+    'Pepino': 2.00,
+    'Batata': 1.50]
+[]
+
+def exibir_produtos():
+    print("\nVerduras disponíveis para venda:")
+    for produto, preco in produtos.items():
+        print(f"{produto}: R${preco:.2f}")
+
+def realizar_compra():
+    total = 0
+    while True:
+        exibir_produtos()
+        produto = input("\nEscolha uma verdura (ou 'sair' para finalizar): ").capitalize()
+        
+        if produto == 'Sair':
+            break
+        
+        if produto in produtos:
+            quantidade = int(input(f"Quantos {produto}s você deseja comprar? "))
+            total += produtos[produto] * quantidade
+            print(f"{quantidade} {produto}(s) adicionados ao carrinho.")
+        else:
+            print("Produto não encontrado. Tente novamente.")
+    
+    print(f"\nTotal da compra: R${total:.2f}")
+    print("Obrigado por comprar conosco!")
+
+def main():
+    print("Bem-vindo ao Sistema de Venda de Verduras!")
+    realizar_compra()
+
+if __name__ == "__main__":
+    main()
+
